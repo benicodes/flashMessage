@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Message</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    {{#if message}}
+    <div style="text-align: center;" class="alert alert-{{message.type}}">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>{{message.intro}}</strong> {{message.message}}
+    </div>
+
+    {{/if}}
+    <div class="container">
+        <div class="sign-up">
+            <h1>Sign up</h1>
+            <form action="" method="post">
+                <label for="">Name:</label> <br>
+                <input type="text" name="name" class="form-control"> <br>
+                <label for="">Email:</label> <br>
+                <input type="email" name="email" class="form-control"> <br>
+                <label for="">Password:</label> <br>
+                <input type="password" name="password" class="form-control"> <br>
+                <label for="">Confirm Password:</label> <br>
+                <input type="password" name="confirm" class="form-control"> <br>
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
